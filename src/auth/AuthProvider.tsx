@@ -20,10 +20,8 @@ const AuthProvider = (props: PropsWithChildren<{}>) => {
   >
       {props.children}
   </Auth0Provider>
+  )
+  
 }
 
-export default AuthProvider
-
-
-
-
+export default AuthProvider;
