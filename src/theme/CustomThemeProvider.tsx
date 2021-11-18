@@ -1,7 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { commonColors, lightColors, darkColors } from './colors';
-import { light } from '@mui/material/styles/createPalette';
 
 const CustomThemeProvider = (props: PropsWithChildren<{}>) => {
 
