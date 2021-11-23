@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import paths from '../../../routes/paths';
+import { useAuth0 } from '@auth0/auth0-react'
 
 const SignInStyledButton = styled(Button)(({ theme }) => ({
   color: theme.commonColors.white,

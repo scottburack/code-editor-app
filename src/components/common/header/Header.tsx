@@ -1,6 +1,7 @@
-import { AppBar, ToolBar, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react'
 import paths from '../../../routes/paths';
 import CodeEditorButton from './CodeEditorButton';
 import SignInButton from './SignInButton';
@@ -16,12 +17,12 @@ const Header = () => {
 
   return (
     <AppBar position="relative">
-      <ToolBar>
+      <Toolbar>
         <Typography variant="h6" sx={{ flex: 1 }}>
           <StyledLink to={paths.home}>Code Editor App</StyledLink>
         </Typography>
-      </ToolBar>
-      { isAuthenticated ? <AuthenticatedButtons /> : <UnauthenticatedButtons /> }
+        { isAuthenticated ? <AuthenticatedButtons /> : <UnauthenticatedButtons /> }
+      </Toolbar>
     </AppBar>
   )
 }
